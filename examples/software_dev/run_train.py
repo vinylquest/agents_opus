@@ -12,10 +12,10 @@ if os.environ.get("OPENAI_BASE_URL") is None:
 litellm.set_verbose = False
 
 if __name__ == "__main__":
-    # 准备数据
+    # Prepare the data
     dataset = SoftwareDevDataset()
 
-    # Trainer训练
+    # Trainer training
     trainer_config_path = "examples/software_dev/configs/trainer_config.json"
     trainer = Trainer(config=TrainerConfig(trainer_config_path), dataset=dataset)
     trainer.train()
